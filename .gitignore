@@ -1,0 +1,10 @@
+# Personal config and secrets — never commit these.
+KNOX-Personal-Console.json
+KNOX-Personal-Console_V*.json
+*.local.json
+*.local
+config/*.json
+!config/KNOX-Personal-Console.example.json
+.env
+*.key
+*.pem
