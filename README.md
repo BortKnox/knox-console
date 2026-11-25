@@ -1,61 +1,92 @@
-# KNOX CONSOLE
+<div align="center">
 
-**A personal command centre for one bench. Audio, media, AI seats, system
-telemetry, remote control and sleep — one grid, one accent, no clutter.**
+<img src="assets/banner.svg" alt="KNOX Console V6.4 — a personal command centre" width="100%">
 
-> **Logo and screenshots:** the flat-vector logo and the two V6.4
-> captures are staged locally and are **not in this repo yet**. The GitHub
-> connector used for this upload only pushes UTF-8 text files, so binary
-> PNGs cannot go through it. Upload them in the GitHub web UI — drag
-> `knox-console-logo.png` into `assets/` and the two captures into
-> `docs/screenshots/` — and the image links in this README will work.
-> Nothing here is faked to cover that gap.
+<br>
 
-```
-UNIT     KNOX-CONSOLE
-TYPE     DASHBOARD / COMMAND CENTRE
-STACK    CUSTOM HTML WIDGETS + CONFIG
-STATUS   ACTIVE — V6.4, PERSONAL BUILD, NO INSTALLER
-```
+**A personal command centre for one bench.**<br>
+Audio, media, AI seats, system telemetry, remote control and sleep —<br>
+one grid, one accent, no clutter.
 
-[**What it is**](#what-it-is) · [**Pages**](#pages) · [**Config**](#config) ·
-[**Screenshots**](#screenshots) · [**Notes**](#notes)
+<br>
 
-## WHAT IT IS
+[**Screenshots**](#screenshots) &nbsp;·&nbsp; [**Pages**](#pages) &nbsp;·&nbsp; [**Features**](#what-it-does) &nbsp;·&nbsp; [**Design rules**](#design-rules) &nbsp;·&nbsp; [**Config**](#config) &nbsp;·&nbsp; [**Direction**](#direction)
 
-KNOX Console is the dashboard that runs Bort's bench. It is a full
-command centre, not a macro deck — the widgets were rebuilt as custom HTML
-on top of the original grid, and it grew past that into its own thing.
+<br>
 
-It does, from one screen:
+<img src="assets/specs.svg" alt="37 pages, 184 widgets, 330 shortcuts, 50 control actions, 5 profiles" width="100%">
 
-- **Audio routing and profiles** — mixer, outputs, push-to-talk, on-air.
-- **Media, radio and Spotify** — 50 radio actions, cinema, music, sleep radio.
-- **PC telemetry** — CPU / RAM / GPU / temps, network, ping.
-- **Remote control and trackpads** — media, browser, Windows, keyboard.
-- **App launcher** — VS Code, Terminal, Git Bash, VLC, Task Manager and more.
-- **AI seats** — Claude, Codex, Antigravity, OpenCode, with quota tracking.
-- **System control, power, VPN and routines** — including charge limits and
-  a nightstand with a sleep timer.
+</div>
 
-The look is deliberate and frozen: AMOLED dark, mint accent `#80d7bd`,
-flat style, radius 16, no shadows. Teenage Engineering stripped-down,
-one-pixel details. If it does not fit that, it does not ship.
+<br>
+
+## SCREENSHOTS
+
+Captured from the live V6.4 build on 25 November 2026. 1280 × 800, flat, no mockup frame — this is the screen as it runs.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/nightstand.png" alt="KNOX Console Nightstand page: clock, moon, next-hours forecast and sleep timer" width="100%">
+      <br><sub><b>NIGHTSTAND</b> — clock, moon, next-hours forecast, sleep timer.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/sleep-wind-down.png" alt="KNOX Console Sleep page: wind-down radio, volume, moon phase and quiet controls" width="100%">
+      <br><sub><b>SLEEP</b> — wind-down radio, volume, moon phase, Goodnight / Screen Off / All Quiet / Mute.</sub>
+    </td>
+  </tr>
+</table>
+
+Provenance, and what was deliberately left out: [docs/screenshots/README.md](docs/screenshots/README.md).
+
+<br>
+
+## WHAT IT DOES
+
+KNOX Console is the dashboard that runs the bench. It is a full command centre, not a macro deck — the widgets were rebuilt as custom HTML on top of the original grid, and it grew past that into its own thing.
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><b>🎚 AUDIO</b><br><sub>Mixer, outputs, profiles, push-to-talk, on-air.</sub></td>
+    <td width="33%" valign="top"><b>📻 MEDIA</b><br><sub>Radio, cinema, music, Spotify, sleep radio. 50 control actions.</sub></td>
+    <td width="33%" valign="top"><b>🤖 AI SEATS</b><br><sub>Claude, Codex, Antigravity, OpenCode — with quota tracking.</sub></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>📊 TELEMETRY</b><br><sub>CPU, RAM, GPU, temps, network, ping — live in the header.</sub></td>
+    <td valign="top"><b>🖱 REMOTE</b><br><sub>Trackpad, media, browser, Windows and keyboard remotes.</sub></td>
+    <td valign="top"><b>🚀 LAUNCH</b><br><sub>VS Code, Terminal, Git Bash, VLC, Task Manager and more.</sub></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>🔌 SYSTEM</b><br><sub>Power, VPN, routines, charge limits.</sub></td>
+    <td valign="top"><b>🌙 UNWIND</b><br><sub>Nightstand, sleep timer, wind-down, one tap to quiet.</sub></td>
+    <td valign="top"><b>🧩 CUSTOM HTML</b><br><sub>Widgets are hand-built HTML, not stock tiles.</sub></td>
+  </tr>
+</table>
+
+<br>
 
 ## PAGES
 
-37 pages, 184 widgets, 330 shortcuts. Full inventory:
-[docs/PAGES.md](docs/PAGES.md).
+<img src="assets/pages-map.svg" alt="The 37 pages in seven groups" width="100%">
 
-| Group | Pages |
-|---|---|
-| Day and world | Home, Today, Focus, Planner, World, News |
-| AI | AI, AI Pulse, AI Quotas, AI Providers |
-| Remote | Remote, Media Remote, Browser Remote, Windows Remote, Keyboard |
-| Launch | Launchpad, Launch Apps, Launch Tools, Launch Media, Launch Web, Launch Folders, Launch Files |
-| Media and audio | Media, Music, Cinema, Radio, Audio, Mic & Live |
-| System | Desk, System, Network, Signals, Power, Routines |
-| Unwind | Calm, Sleep, Nightstand |
+Full inventory with widget counts: [docs/PAGES.md](docs/PAGES.md).
+
+<br>
+
+## DESIGN RULES
+
+The look is deliberate and frozen. If it does not fit, it does not ship.
+
+```
+SURFACE   AMOLED BLACK
+ACCENT    MINT  #80d7bd
+STYLE     FLAT — RADIUS 16 — NO SHADOWS
+DETAIL    ONE-PIXEL LINES, MONO LABELS
+ORIGIN    TEENAGE ENGINEERING, STRIPPED BACK
+RULE      FIT THE WIDGET TO THE DESIGN, NEVER THE REVERSE
+```
+
+<br>
 
 ## CONFIG
 
@@ -65,96 +96,44 @@ This repo holds a **sanitised example config**, not a live one:
 config/KNOX-Personal-Console.example.json
 ```
 
-It has the same structure as the live V6.4 config — same 37 pages, same
-widget counts, same 330 shortcuts — with personal data replaced. See
-[docs/CONFIG.md](docs/CONFIG.md) for what each section does and how to
-fill the placeholders in.
+Same structure as the live V6.4 config — same 37 pages, same widget counts, same 330 shortcuts — with personal data replaced. [docs/CONFIG.md](docs/CONFIG.md) explains every section.
 
-To use it:
+**To use it**
 
-1. Copy the example to your own config file. Do not commit your live copy.
-2. Fill in every `REPLACE_ME` — LAN tokens, Spotify client ID — and set
-   `weather.city`, `weather.lat` and `weather.lon` to your own city.
-3. Fix the shortcut commands: personal Windows paths were replaced with
-   bare executable names or `REPLACE_ME`. Point them at your own apps.
-4. Import it into your PhoneBox-based console and adjust the layout to
-   your own screen. Do not change the design to fit a new widget — fit the
-   widget to the design.
+1. Copy the example to your own config file. Never commit your live copy.
+2. Fill in every `REPLACE_ME` — LAN tokens, Spotify client ID — and set `weather.city`, `weather.lat` and `weather.lon` to your own place.
+3. Fix the shortcut commands: personal paths were replaced with bare executable names or `REPLACE_ME`. Point them at your own apps.
+4. Import it into your PhoneBox-based console and adjust the layout to your screen.
 
-The sanitiser that produced the example is in the repo, so the process is
-auditable:
+**Auditable by design.** The script that produced the example is in the repo:
 
 ```
 python scripts/sanitise-config.py <live-config.json> <example-config.json>
 ```
 
-## SCREENSHOTS
-
-Two captures from the live V6.4 build, 25 November 2026. The PNG files
-themselves are pending upload via the GitHub web UI (see the note at the
-top of this file) — the connector cannot push binary files.
-
-| File (upload to `docs/screenshots/`) | Shows |
-|---|---|
-| `nightstand.png` | Nightstand page: clock 2:56 PM, Wednesday 25 November, moon, next-hours forecast, sleep timer. |
-| `sleep-wind-down.png` | Sleep page: wind-down radio (Nightride FM, Smooth Chill, Smooth Relax), volume 90%, full moon 100% lit, Goodnight / Screen Off / All Quiet / Mute. |
-
-Provenance and what was left out, and why:
-[docs/screenshots/README.md](docs/screenshots/README.md).
-
-## LAYOUT
-
-```
-README.md                              # this file
-LICENSE                                # MIT
-CONTRIBUTING.md                        # how to report, what not to send
-.gitignore                             # personal config stays out
-assets/
-  knox-console-logo.png                # flat vector logo — UPLOAD VIA WEB, see top of README
-config/
-  KNOX-Personal-Console.example.json   # sanitised V6.4 template (1.1 MB)
-docs/
-  CONFIG.md                            # every config section, explained
-  PAGES.md                             # 37 pages, widget inventory
-  screenshots/
-    README.md                          # provenance
-    nightstand.png                     # Home / Nightstand, V6.4 — UPLOAD VIA WEB
-    sleep-wind-down.png                # Sleep, V6.4 — UPLOAD VIA WEB
-scripts/
-  sanitise-config.py                   # live config -> public example
-```
-
-
-## NOTES
-
-- This is a personal build, shared as is. It was built for one bench
-  first, and published so anyone can read, fork or borrow from it.
-- The live config is **not** in this repo. It holds LAN tokens, a Spotify
-  client ID, a home-city location and personal Windows paths. The example
-  replaces all of those — 58 placeholders in total — and the raw file was
-  never committed. See [docs/CONFIG.md](docs/CONFIG.md#sanitised).
-- Personal project, shared as is. Issues and pull requests may not get a
-  reply; forking is welcome.
-- The logo and screenshots are Bort's own art and captures. If the
-  presentation here falls short of the console's own aesthetic, that is
-  known — the copy and the repo are the deliverable; the art is his.
+<br>
 
 ## DIRECTION
 
-Next step, planned not done: port each page to **one single custom HTML
-widget** instead of many default widgets jammed together. One widget per
-page should give better customisation, faster page changes, and more out
-of the canvas — and it will most likely compress the config file by
-avoiding heaps of widget snippets. That last part is Bort's call, not a
-measured result yet.
+Planned, not done: port each page to **one single custom HTML widget** instead of many default widgets jammed together. One widget per page should mean better customisation, faster page changes and more out of the canvas — and it will most likely shrink the config by dropping the heaps of widget snippets. That last part is a bet, not a measurement yet.
 
-## ACKNOWLEDGEMENT
+<br>
 
-KNOX Console is built on [PhoneBox](https://github.com/ersinkoc/phonebox)
-by ersinkoc — its infrastructure, setup and grid. That is the nod, and it
-belongs here at the bottom: Bort took it to the level it deserved, and the
-work in this repo is his.
+## NOTES
 
-## LICENSE
+- A personal build, shared as is. Built for one bench first, published so anyone can read, fork or borrow from it.
+- The live config is **not** in this repo. It holds LAN tokens, a Spotify client ID, a home location and personal paths; the example replaces all of them.
+- Issues and pull requests may not get a reply. Forking is welcome.
 
-MIT — see [LICENSE](LICENSE).
+<br>
+
+<div align="center">
+
+<sub>
+
+**ACKNOWLEDGEMENT** &nbsp;·&nbsp; Built on [PhoneBox](https://github.com/ersinkoc/phonebox) by ersinkoc — its infrastructure, setup and grid.<br>
+**LICENSE** &nbsp;·&nbsp; MIT — see [LICENSE](LICENSE)
+
+</sub>
+
+</div>

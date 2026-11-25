@@ -113,15 +113,17 @@ def main():
         weather["city"] = "YOUR_CITY"
         weather["lat"] = 0.0
         weather["lon"] = 0.0
-    # The world-clock widget also names the home city; make it generic.
-    # Any zone labelled "<City>=Australia/Sydney" becomes "Home=...".
+    # The world-clock widget names the home city AND its timezone; both
+    # point at where the build lives, so swap in a neutral example zone.
+    # Any zone labelled "<City>=Australia/Sydney" becomes "Berlin=...".
     config = json.loads(re.sub(
-        r"[A-Za-z ]+=Australia/Sydney", "Home=Australia/Sydney",
+        r"[A-Za-z ]+=Australia/Sydney", "Berlin=Europe/Berlin",
         json.dumps(config)))
-    # A public weather shortcut also names the home town in its URL.
+    # A public weather shortcut names the home town / state in its URL;
+    # point it at the national BOM site instead.
     config = json.loads(re.sub(
-        r"https://www\.bom\.gov\.au/nsw/forecasts/[a-z]+\.shtml",
-        "https://www.bom.gov.au/nsw/forecasts/",
+        r"https://www\.bom\.gov\.au/[a-z]+/forecasts/[a-z]*(?:\.shtml)?",
+        "https://www.bom.gov.au/",
         json.dumps(config)))
 
     # The Charge Knox Console rule is tied to one tablet Bort does not

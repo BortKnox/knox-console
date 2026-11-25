@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="KNOX Console V6.4 — a personal command centre">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#101a16" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="78%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#80d7bd" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#80d7bd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#80d7bd" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#80d7bd" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#80d7bd" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="screen"><rect x="838" y="104" width="352" height="232" rx="10"/></clipPath>
+    <style>
+      text { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .led { animation: blink 2.4s steps(1) infinite; }
+      @keyframes blink { 0%,62% { opacity: 1 } 63%,100% { opacity: .15 } }
+      .bar { transform-box: fill-box; transform-origin: bottom; animation: pulse 3.2s ease-in-out infinite; }
+      .b2 { animation-delay: -.5s } .b3 { animation-delay: -1.1s } .b4 { animation-delay: -1.7s } .b5 { animation-delay: -2.3s }
+      @keyframes pulse { 0%,100% { transform: scaleY(.45) } 50% { transform: scaleY(1) } }
+      .scan { animation: sweep 6s linear infinite; }
+      @keyframes sweep { from { transform: translateY(0) } to { transform: translateY(232px) } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="440" rx="16" fill="#000"/>
+  <rect width="1280" height="440" rx="16" fill="url(#grid)"/>
+  <rect width="1280" height="440" rx="16" fill="url(#glow)"/>
+  <rect x="0.5" y="0.5" width="1279" height="439" rx="16" fill="none" stroke="#1c2a25"/>
+
+  <!-- top rail -->
+  <g font-size="13" letter-spacing="3" fill="#5f726a">
+    <text x="64" y="64">UNIT</text><text x="124" y="64" fill="#c9d6d0">KNOX-CONSOLE</text>
+    <text x="360" y="64">TYPE</text><text x="418" y="64" fill="#c9d6d0">COMMAND CENTRE</text>
+    <text x="64" y="86">BUILD</text><text x="124" y="86" fill="#c9d6d0">V6.4 / PERSONAL</text>
+  </g>
+  <circle class="led" cx="1216" cy="60" r="5" fill="#80d7bd"/>
+  <text x="1198" y="65" font-size="12" letter-spacing="3" fill="#5f726a" text-anchor="end">LIVE</text>
+
+  <!-- wordmark -->
+  <text x="58" y="236" font-size="148" font-weight="800" letter-spacing="-6" fill="#f2f6f4">KNOX</text>
+  <text x="64" y="300" font-size="46" font-weight="700" letter-spacing="22" fill="none" stroke="#80d7bd" stroke-width="1.4">CONSOLE</text>
+  <rect x="64" y="326" width="360" height="1" fill="url(#fade)"/>
+
+  <text x="64" y="364" font-size="17" fill="#9db0a8">One bench. One grid. One accent.</text>
+  <text x="64" y="390" font-size="13" letter-spacing="2" fill="#5f726a">AUDIO · MEDIA · AI SEATS · TELEMETRY · REMOTE · SLEEP</text>
+
+  <!-- device -->
+  <rect x="820" y="86" width="388" height="268" rx="22" fill="#050807" stroke="#2a3b35"/>
+  <rect x="838" y="104" width="352" height="232" rx="10" fill="#000" stroke="#16231e"/>
+  <g clip-path="url(#screen)">
+    <!-- clock tile -->
+    <rect x="850" y="116" width="150" height="96" rx="8" fill="#070d0b" stroke="#1a2a24"/>
+    <text x="864" y="168" font-size="46" font-weight="700" fill="#f2f6f4">2:56</text>
+    <text x="866" y="196" font-size="10" letter-spacing="2" fill="#5f726a">NIGHTSTAND</text>
+    <!-- moon tile -->
+    <rect x="1008" y="116" width="170" height="96" rx="8" fill="#070d0b" stroke="#1a2a24"/>
+    <circle cx="1093" cy="164" r="30" fill="#e9efe3"/>
+    <circle cx="1093" cy="164" r="30" fill="none" stroke="#80d7bd" stroke-opacity=".5"/>
+    <!-- meter tile -->
+    <rect x="850" y="220" width="150" height="104" rx="8" fill="#070d0b" stroke="#1a2a24"/>
+    <g fill="#80d7bd">
+      <rect class="bar" x="868" y="244" width="14" height="60" rx="2"/>
+      <rect class="bar b2" x="890" y="244" width="14" height="60" rx="2"/>
+      <rect class="bar b3" x="912" y="244" width="14" height="60" rx="2"/>
+      <rect class="bar b4" x="934" y="244" width="14" height="60" rx="2"/>
+      <rect class="bar b5" x="956" y="244" width="14" height="60" rx="2"/>
+    </g>
+    <!-- buttons tile -->
+    <rect x="1008" y="220" width="170" height="104" rx="8" fill="#070d0b" stroke="#1a2a24"/>
+    <g fill="none" stroke="#2a3b35">
+      <rect x="1020" y="234" width="68" height="34" rx="6"/><rect x="1098" y="234" width="68" height="34" rx="6"/>
+      <rect x="1020" y="276" width="68" height="34" rx="6"/>
+    </g>
+    <rect x="1098" y="276" width="68" height="34" rx="6" fill="#80d7bd"/>
+    <text x="1132" y="298" font-size="11" font-weight="700" letter-spacing="1" fill="#02130d" text-anchor="middle">QUIET</text>
+    <!-- scan line -->
+    <rect class="scan" x="838" y="104" width="352" height="2" fill="#80d7bd" opacity=".18"/>
+  </g>
+  <rect x="1000" y="360" width="64" height="3" rx="1.5" fill="#1c2a25" transform="translate(-130 0)"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" width="1280" height="150" role="img" aria-label="37 pages, 184 widgets, 330 shortcuts, 50 control actions, 5 profiles">
+  <defs>
+    <style>
+      text { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .n { font-size: 54px; font-weight: 800; fill: #80d7bd; }
+      .l { font-size: 12px; letter-spacing: 3px; fill: #7d8f87; }
+    </style>
+  </defs>
+  <rect width="1280" height="150" rx="16" fill="#000"/>
+  <rect x="0.5" y="0.5" width="1279" height="149" rx="16" fill="none" stroke="#1c2a25"/>
+  <g stroke="#16231e"><path d="M256 28V122M512 28V122M768 28V122M1024 28V122"/></g>
+  <g text-anchor="middle">
+    <text class="n" x="128" y="84">37</text><text class="l" x="128" y="112">PAGES</text>
+    <text class="n" x="384" y="84">184</text><text class="l" x="384" y="112">WIDGETS</text>
+    <text class="n" x="640" y="84">330</text><text class="l" x="640" y="112">SHORTCUTS</text>
+    <text class="n" x="896" y="84">50</text><text class="l" x="896" y="112">CONTROL ACTIONS</text>
+    <text class="n" x="1152" y="84">5</text><text class="l" x="1152" y="112">PROFILES</text>
+  </g>
+</svg>

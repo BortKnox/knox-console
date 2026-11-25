@@ -3,10 +3,6 @@
 Captures from Bort's own live KNOX Console V6.4 build, taken 25 November
 2026 on the YQ10S tablet / bench setup. 1280 x 800 each.
 
-> The two PNGs are **not in this repo yet** — the GitHub connector used
-> for the first upload only pushes UTF-8 text files. Upload them here via
-> the GitHub web UI (drag and drop into this folder).
-
 | File | Shows |
 |---|---|
 | `nightstand.png` | Nightstand page: clock 2:56 PM, Wednesday 25 November, moon, next-hours forecast, sleep timer. |
